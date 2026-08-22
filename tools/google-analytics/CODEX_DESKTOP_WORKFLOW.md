@@ -11,8 +11,8 @@
 
 ## 目前專案資料
 
-- 專案目錄：`D:\game\link.9sweb.com`
-- Google 工具目錄：`D:\game\link.9sweb.com\tools\google-analytics`
+- Repository root：clone 後的專案根目錄
+- Google 工具目錄：`tools/google-analytics`
 - 網站：`https://link.9sweb.com/`
 - GTM：`GTM-W9BNQSDC`
 - GA4 Measurement ID：`G-4N0V6SDWH1`
@@ -48,7 +48,7 @@ Codex Desktop
 ### 1. 先做本機檢查
 
 ```powershell
-cd D:\game\link.9sweb.com\tools\google-analytics
+cd tools/google-analytics
 npm run health:local
 ```
 
@@ -65,7 +65,7 @@ npm run health:local
 若本機尚未有可用 refresh token：
 
 ```powershell
-cd D:\game\link.9sweb.com\tools\google-analytics
+cd tools/google-analytics
 npm run report:connect
 ```
 
@@ -90,7 +90,7 @@ npm run auth:status
 已有 refresh token 後，直接執行：
 
 ```powershell
-cd D:\game\link.9sweb.com\tools\google-analytics
+cd tools/google-analytics
 npm run report
 ```
 
@@ -157,7 +157,7 @@ Chrome 的角色是確認「瀏覽器真的執行了事件」。API 的角色是
 請從報表目錄啟動本機 HTTP 服務：
 
 ```powershell
-cd D:\game\link.9sweb.com\tools\google-analytics\reports
+cd tools/google-analytics/reports
 python -m http.server 8766
 ```
 
@@ -201,4 +201,3 @@ http://127.0.0.1:8766/latest.html
 - 期間、網站、CTA 類型與客戶篩選；
 - 分數變化、CTA 趨勢、異常通知；
 - 只在新出現 FAIL/WARN 或指標明顯異常時通知用戶。
-
