@@ -12,6 +12,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+[hidden] { display: none !important; }
+
 html {
   min-height: 100%;
   background: #05060a;
@@ -241,6 +243,7 @@ button { border: 0; }
 
 .world-tab:focus-visible,
 .play-button:focus-visible,
+.insight-card:focus-visible,
 .brand:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -262,7 +265,7 @@ button { border: 0; }
 }
 
 .arcade[data-world="maxabounce"] .switch-glider { transform: translateX(100%); }
-.arcade[data-world="web-design"] .switch-glider { transform: translateX(200%); }
+.arcade[data-world="ai-notes"] .switch-glider { transform: translateX(200%); }
 
 .game-stage {
   --tilt-x: 0deg;
@@ -328,14 +331,47 @@ button { border: 0; }
   background: #06152c;
 }
 
-.arcade[data-world="web-design"] .game-art {
-  height: 58%;
-  padding: 18px;
+.arcade[data-world="ai-notes"] .stage-shell {
+  min-height: 560px;
+}
+
+.arcade[data-world="ai-notes"] .game-art {
+  top: 47px;
+  right: auto;
+  bottom: auto;
+  left: 12px;
+  width: 61%;
+  height: 38%;
+  padding: 10px;
   object-fit: contain;
   object-position: center;
   background:
     linear-gradient(135deg, rgba(201, 255, 99, 0.11), transparent 56%),
     #0c1110;
+  border: 1px solid rgba(201, 255, 99, 0.2);
+  border-radius: 3px 16px 3px 3px;
+}
+
+.insight-art-secondary {
+  position: absolute;
+  z-index: 1;
+  top: 47px;
+  right: 12px;
+  display: none;
+  width: 34%;
+  height: 38%;
+  border: 1px solid rgba(201, 255, 99, 0.24);
+  border-radius: 12px 3px 3px 3px;
+  background: #111;
+  box-shadow: -12px 14px 30px rgba(0, 0, 0, 0.42);
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+}
+
+.arcade[data-world="ai-notes"] .insight-art-secondary {
+  display: block;
+  animation: secondary-art-enter 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .art-wash {
@@ -429,6 +465,88 @@ button { border: 0; }
   margin-right: 3px;
   color: var(--accent);
 }
+
+.insight-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.insight-card {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr) 28px;
+  min-height: 68px;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid rgba(201, 255, 99, 0.24);
+  background: rgba(201, 255, 99, 0.065);
+  color: var(--paper);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.insight-card-image {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 2px 9px 2px 2px;
+  background: #0a0c0b;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.insight-card-copy {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.insight-card-copy small {
+  color: var(--accent);
+  font: 700 7px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 1.25px;
+}
+
+.insight-card-copy strong {
+  font-size: 12.5px;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+.insight-card-copy > span {
+  overflow: hidden;
+  color: rgba(245, 241, 232, 0.52);
+  font-size: 9.5px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.insight-card > i {
+  display: grid;
+  width: 28px;
+  height: 100%;
+  place-items: center;
+  border-left: 1px solid rgba(201, 255, 99, 0.16);
+  color: var(--accent);
+  font-size: 17px;
+  font-style: normal;
+  transition: transform 0.2s ease;
+}
+
+.insight-card:hover,
+.insight-card:focus-visible {
+  border-color: rgba(201, 255, 99, 0.52);
+  background: rgba(201, 255, 99, 0.11);
+  transform: translateY(-1px);
+}
+
+.insight-card:hover > i,
+.insight-card:focus-visible > i { transform: translate(2px, -2px); }
+
+.insight-card:active { transform: scale(0.985); }
 
 .play-button {
   position: relative;
@@ -554,6 +672,11 @@ footer {
 @keyframes art-breathe {
   from { transform: scale(1.03) translate3d(0, 0, 0); }
   to { transform: scale(1.1) translate3d(-0.8%, -0.6%, 0); }
+}
+
+@keyframes secondary-art-enter {
+  from { opacity: 0; transform: translateX(16px) rotate(2deg) scale(0.96); }
+  to { opacity: 1; transform: translateX(0) rotate(1.3deg) scale(1); }
 }
 
 @keyframes copy-enter {
