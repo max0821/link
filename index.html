@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#05060a">
+    <meta name="description" content="9sweb 的遊戲、工具、Skills 與實驗專案入口。">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="9sweb Projects">
+    <meta property="og:description" content="Games · Tools · Skills，一站收錄 9sweb 做過的專案。">
+    <meta property="og:image" content="https://link.9sweb.com/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="9sweb Projects">
+    <meta name="twitter:description" content="Games · Tools · Skills，一站收錄 9sweb 做過的專案。">
+    <meta name="twitter:image" content="https://link.9sweb.com/assets/og.png">
+    <link rel="canonical" href="https://link.9sweb.com/">
+    <title>9sweb Projects</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="/assets/9sweb-logo.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/assets/lootsu-og.png" as="image" type="image/png">
+    <link rel="preload" href="/assets/maxabounce-og.png" as="image" type="image/png">
+    <link rel="preload" href="/assets/web-design-skill.png" as="image" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="arcade" data-world="lootsu" style="--accent:#ffb938;--accent-rgb:255, 87, 39">
+      <div class="atmosphere" aria-hidden="true">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="horizon"></div>
+        <i class="spark" style="left:8%;top:14%;width:2px;height:2px;animation-delay:.1s"></i>
+        <i class="spark" style="left:21%;top:35%;width:1px;height:1px;animation-delay:1.4s"></i>
+        <i class="spark" style="left:86%;top:19%;width:2px;height:2px;animation-delay:.7s"></i>
+        <i class="spark" style="left:74%;top:41%;width:1px;height:1px;animation-delay:2.1s"></i>
+        <i class="spark" style="left:92%;top:62%;width:1px;height:1px;animation-delay:.4s"></i>
+        <i class="spark" style="left:11%;top:73%;width:2px;height:2px;animation-delay:1.8s"></i>
+        <i class="spark" style="left:59%;top:10%;width:1px;height:1px;animation-delay:2.7s"></i>
+        <i class="spark" style="left:43%;top:78%;width:1px;height:1px;animation-delay:.9s"></i>
+      </div>
+
+      <div class="mobile-canvas">
+        <header class="brand-bar">
+          <a class="brand" href="#top" aria-label="9sweb 首頁">
+            <img src="/assets/9sweb-logo.svg" alt="">
+          </a>
+          <div class="brand-meta">
+            <span class="live-dot" aria-hidden="true"></span>
+            PROJECT INDEX
+          </div>
+        </header>
+
+        <section class="intro" id="top">
+          <p class="eyebrow">9SWEB · PROJECT INDEX</p>
+          <h1>
+            做過的東西，
+            <span>都在這裡。</span>
+          </h1>
+        </section>
+
+        <nav class="world-switch" aria-label="選擇專案">
+          <button class="world-tab active" type="button" data-project="0" aria-pressed="true">
+            <span class="tab-number">01</span><span class="tab-name">擲筊爐主</span>
+          </button>
+          <button class="world-tab" type="button" data-project="1" aria-pressed="false">
+            <span class="tab-number">02</span><span class="tab-name">星海打磚</span>
+          </button>
+          <button class="world-tab" type="button" data-project="2" aria-pressed="false">
+            <span class="tab-number">03</span><span class="tab-name">Web Design Skill</span>
+          </button>
+          <span class="switch-glider" aria-hidden="true"></span>
+        </nav>
+
+        <section class="game-stage" aria-live="polite" aria-label="目前專案">
+          <div class="stage-shell" data-project-title="擲筊 × 爐主">
+            <img class="game-art active" data-project-image="0" src="/assets/lootsu-og.png" alt="" decoding="async" fetchpriority="high" aria-hidden="false">
+            <img class="game-art" data-project-image="1" src="/assets/maxabounce-og.png" alt="" decoding="async" aria-hidden="true">
+            <img class="game-art" data-project-image="2" src="/assets/web-design-skill.png" alt="" decoding="async" aria-hidden="true">
+            <div class="art-wash"></div>
+            <div class="scanline"></div>
+
+            <div class="stage-topline">
+              <span class="now-playing"><i aria-hidden="true"></i> FEATURED PROJECT</span>
+              <span class="game-number">01 / 03</span>
+            </div>
+
+            <div class="stage-copy">
+              <p class="game-kicker">TAIWAN FOLK ARCADE</p>
+              <h2>擲筊 × 爐主</h2>
+              <p class="game-description">擲出聖筊、累積香火，替你的縣市與神明衝上全台排行。</p>
+              <div class="tag-row" aria-label="專案資訊">
+                <span>免下載</span><span>全台排行</span><span>手機直玩</span>
+              </div>
+              <a class="play-button" href="https://lootsu.9sweb.com/">
+                <span>進廟擲筊</span><i aria-hidden="true">↗</i>
+              </a>
+            </div>
+
+            <div class="edge-label" aria-hidden="true">9SWEB / 01</div>
+          </div>
+        </section>
+
+        <div class="swipe-hint" aria-hidden="true">
+          <span>SWIPE</span><i></i><span>切換專案</span>
+        </div>
+
+        <footer>
+          <span>© 9sweb</span>
+          <span>GAMES · TOOLS · SKILLS</span>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
