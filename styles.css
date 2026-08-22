@@ -146,15 +146,34 @@ button { border: 0; }
 
 .brand-meta {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: 7px;
   color: rgba(255, 255, 255, 0.72);
-  font: 800 clamp(9px, 2.6vw, 11px)/1 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: clamp(0.8px, 0.25vw, 1.2px);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(0.65rem, 3.25vw, 0.875rem);
+  font-weight: 800;
+  line-height: 1;
   white-space: nowrap;
 }
 
+.brand-meta-text {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.brand-letter {
+  display: inline-block;
+  animation: letter-hop 4.8s ease-in-out infinite;
+  animation-delay: calc(var(--letter-index) * 85ms);
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
+.brand-space { width: 0.48em; }
+
 .live-dot {
+  flex: 0 0 auto;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -710,6 +729,12 @@ footer {
   50% { opacity: 1; }
 }
 
+@keyframes letter-hop {
+  0%, 5%, 100% { transform: translateY(0) rotate(0); }
+  1.8% { transform: translateY(-3px) rotate(-2deg); }
+  3.4% { transform: translateY(1px) rotate(1deg); }
+}
+
 @keyframes swipe-dot {
   0%, 100% { left: 0; opacity: 0.3; }
   50% { left: 29px; opacity: 1; }
@@ -733,6 +758,20 @@ footer {
   .stage-shell { min-height: 422px; }
   .tag-row { gap: 7px; }
 }
+
+.noscript-index {
+  display: grid;
+  width: min(calc(100% - 36px), 394px);
+  gap: 10px;
+  margin: 20px auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: #0b0d13;
+  color: var(--paper);
+  font-size: 13px;
+}
+
+.noscript-index a { color: #c9ff63; }
 
 @media (prefers-reduced-motion: reduce) {
   *,

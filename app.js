@@ -13,6 +13,7 @@ const projects = Object.freeze([
     insights: [
       {
         date: "2026.08.22",
+        dateISO: "2026-08-22",
         meta: "01 / AGENT SKILL",
         title: "Web Design Skill",
         description: "說明及安裝方式",
@@ -21,6 +22,7 @@ const projects = Object.freeze([
       },
       {
         date: "2026.08.22",
+        dateISO: "2026-08-22",
         meta: "02 / SOCIAL LINK",
         title: "免費客製自己的 Social Linktree",
         description: "GitHub 免費免主機，ChatGPT 連動後輕鬆搞定",
@@ -207,7 +209,10 @@ function commitProject(nextIndex, animate = true) {
         copy.className = "insight-card-copy";
 
         const meta = document.createElement("small");
-        meta.textContent = `${insight.date} · ${insight.meta}`;
+        const published = document.createElement("time");
+        published.dateTime = insight.dateISO;
+        published.textContent = insight.date;
+        meta.append(published, ` · ${insight.meta}`);
 
         const title = document.createElement("strong");
         title.textContent = insight.title;
