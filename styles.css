@@ -133,7 +133,7 @@ button { border: 0; }
 
 .brand {
   display: block;
-  width: 172px;
+  width: clamp(168px, 48vw, 196px);
   text-decoration: none;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.45));
 }
@@ -752,7 +752,6 @@ footer {
 @media (max-width: 360px) {
   .mobile-canvas { padding-right: 14px; padding-left: 14px; }
   .brand-bar { height: 58px; }
-  .brand { width: 154px; }
   .world-tab { font-size: 10px; letter-spacing: 0.02em; }
   .tab-number { display: none; }
   .stage-shell { min-height: 422px; }
