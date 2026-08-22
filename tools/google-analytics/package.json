@@ -5,6 +5,7 @@
   "scripts": {
     "auth:url": "node src/cli.mjs auth:url",
     "auth:status": "node src/cli.mjs auth:status",
+    "public:check": "node src/public-safety-check.mjs",
     "auth:connect": "node src/cli.mjs auth:connect",
     "health:local": "node src/cli.mjs health:local",
     "health": "node src/cli.mjs health",

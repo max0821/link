@@ -54,6 +54,9 @@ npm run auth:url
 # 查看目前 OAuth 設定狀態，不會顯示任何 token
 npm run auth:status
 
+# 提交前檢查公開檔案，不會輸出敏感內容
+npm run public:check
+
 # Codex Desktop：使用者明確同意後，互動式唯讀 OAuth
 npm run health:connect -- --confirm-read
 
