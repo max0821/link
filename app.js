@@ -1,33 +1,7 @@
 const projects = Object.freeze([
   {
-    id: "lootsu",
-    number: "01",
-    kicker: "TAIWAN FOLK ARCADE",
-    title: "擲筊 × 爐主",
-    description: "擲出聖筊、累積香火，替你的縣市與神明衝上全台排行。",
-    image: "./assets/lootsu-og.png",
-    href: "https://lootsu.9sweb.com/",
-    cta: "進廟擲筊",
-    tags: ["免下載", "全台排行", "手機直玩"],
-    accent: "#ffb938",
-    accentRgb: "255, 87, 39",
-  },
-  {
-    id: "maxabounce",
-    number: "02",
-    kicker: "DEEP SPACE ARCADE",
-    title: "MaxAbounce",
-    description: "擊碎磚陣、測繪星球、解鎖曲速，把未知星域變成你的疆界。",
-    image: "./assets/maxabounce-og.png",
-    href: "https://maxabounce.9sweb.com/",
-    cta: "啟航打磚",
-    tags: ["免下載", "星圖征服", "手機直玩"],
-    accent: "#57d5ff",
-    accentRgb: "32, 154, 255",
-  },
-  {
     id: "ai-notes",
-    number: "03",
+    number: "01",
     label: "LATEST NOTES",
     kicker: "BUILD IN PUBLIC · AI NOTES",
     title: "AI心得",
@@ -54,6 +28,32 @@ const projects = Object.freeze([
     ],
     accent: "#c9ff63",
     accentRgb: "201, 255, 99",
+  },
+  {
+    id: "lootsu",
+    number: "02",
+    kicker: "TAIWAN FOLK ARCADE",
+    title: "擲筊 × 爐主",
+    description: "擲出聖筊、累積香火，替你的縣市與神明衝上全台排行。",
+    image: "./assets/lootsu-og.png",
+    href: "https://lootsu.9sweb.com/",
+    cta: "進廟擲筊",
+    tags: ["免下載", "全台排行", "手機直玩"],
+    accent: "#ffb938",
+    accentRgb: "255, 87, 39",
+  },
+  {
+    id: "maxabounce",
+    number: "03",
+    kicker: "DEEP SPACE ARCADE",
+    title: "MaxAbounce",
+    description: "擊碎磚陣、測繪星球、解鎖曲速，把未知星域變成你的疆界。",
+    image: "./assets/maxabounce-og.png",
+    href: "https://maxabounce.9sweb.com/",
+    cta: "啟航打磚",
+    tags: ["免下載", "星圖征服", "手機直玩"],
+    accent: "#57d5ff",
+    accentRgb: "32, 154, 255",
   },
 ]);
 
@@ -104,8 +104,8 @@ function waitForImage(image) {
   });
 }
 
-const imageReady = projects.map((_, index) => {
-  const dependencies = index === 2
+const imageReady = projects.map((project, index) => {
+  const dependencies = project.insights
     ? [projectImages[index], secondaryInsightImage]
     : [projectImages[index]];
 
@@ -119,7 +119,7 @@ function restartProjectMotion(activeImage) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const animatedElements = [stageShell, activeImage, stageCopy];
-  if (activeIndex === 2) animatedElements.push(secondaryInsightImage);
+  if (projects[activeIndex].insights) animatedElements.push(secondaryInsightImage);
   animatedElements.forEach((element) => {
     element.style.animation = "none";
   });
