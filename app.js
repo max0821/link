@@ -26,15 +26,32 @@ const projects = Object.freeze([
     accentRgb: "32, 154, 255",
   },
   {
-    id: "web-design",
+    id: "ai-notes",
     number: "03",
-    kicker: "OPEN SOURCE · AGENT SKILL",
-    title: "Web Design Skill",
-    description: "把視覺方向、素材規劃、精準切版與 render-based QA，變成一套可安裝的 Agent Skill。",
+    label: "LATEST NOTES",
+    kicker: "BUILD IN PUBLIC · AI NOTES",
+    title: "AI心得",
+    description: "把我實際用 ChatGPT 做 Skill、做免費 Social Link 的過程，整理成可以直接照著做的方法。",
     image: "./assets/web-design-skill.png",
-    href: "https://github.com/max0821/web-design-skill",
-    cta: "查看 Skill",
-    tags: ["v1.2.1", "MIT", "GitHub"],
+    href: "#",
+    cta: "查看心得",
+    tags: ["ChatGPT", "實作筆記", "免費分享"],
+    insights: [
+      {
+        meta: "01 / AGENT SKILL",
+        title: "Web Design Skill",
+        description: "說明及安裝方式",
+        image: "./assets/web-design-skill.png",
+        href: "https://github.com/max0821/web-design-skill",
+      },
+      {
+        meta: "02 / SOCIAL LINK",
+        title: "免費客製自己的 Social Linktree",
+        description: "GitHub 免費免主機，ChatGPT 連動後輕鬆搞定",
+        image: "./assets/ai-social-linktree-thread.png",
+        href: "https://www.threads.com/share/FalBiuCAX/",
+      },
+    ],
     accent: "#c9ff63",
     accentRgb: "201, 255, 99",
   },
@@ -44,13 +61,16 @@ const root = document.querySelector(".arcade");
 const stage = document.querySelector(".game-stage");
 const stageShell = document.querySelector(".stage-shell");
 const projectImages = [...document.querySelectorAll("[data-project-image]")];
+const secondaryInsightImage = document.querySelector(".insight-art-secondary");
 const projectKicker = document.querySelector(".game-kicker");
 const projectTitle = document.querySelector(".stage-copy h2");
 const projectDescription = document.querySelector(".game-description");
 const projectTags = document.querySelector(".tag-row");
+const insightList = document.querySelector(".insight-list");
 const projectLink = document.querySelector(".play-button");
 const projectLinkLabel = projectLink.querySelector("span");
 const projectNumber = document.querySelector(".game-number");
+const nowPlayingLabel = document.querySelector(".now-playing-label");
 const edgeLabel = document.querySelector(".edge-label");
 const stageCopy = document.querySelector(".stage-copy");
 const tabs = [...document.querySelectorAll(".world-tab")];
@@ -84,17 +104,22 @@ function waitForImage(image) {
   });
 }
 
-const imageReady = projects.map((_, index) =>
-  waitForImage(projectImages[index]).then(
+const imageReady = projects.map((_, index) => {
+  const dependencies = index === 2
+    ? [projectImages[index], secondaryInsightImage]
+    : [projectImages[index]];
+
+  return Promise.all(dependencies.map(waitForImage)).then(
     () => true,
     () => false,
-  ),
-);
+  );
+});
 
 function restartProjectMotion(activeImage) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const animatedElements = [stageShell, activeImage, stageCopy];
+  if (activeIndex === 2) animatedElements.push(secondaryInsightImage);
   animatedElements.forEach((element) => {
     element.style.animation = "none";
   });
@@ -143,6 +168,7 @@ function commitProject(nextIndex, animate = true) {
   projectTitle.textContent = project.title;
   projectDescription.textContent = project.description;
   projectNumber.textContent = `${project.number} / ${String(projects.length).padStart(2, "0")}`;
+  nowPlayingLabel.textContent = project.label ?? "FEATURED PROJECT";
   edgeLabel.textContent = `9SWEB / ${project.number}`;
 
   projectTags.replaceChildren(
@@ -155,6 +181,50 @@ function commitProject(nextIndex, animate = true) {
 
   projectLink.href = project.href;
   projectLinkLabel.textContent = project.cta;
+
+  const hasInsights = Array.isArray(project.insights) && project.insights.length > 0;
+  projectTags.hidden = hasInsights;
+  projectLink.hidden = hasInsights;
+  insightList.hidden = !hasInsights;
+
+  if (hasInsights) {
+    insightList.replaceChildren(
+      ...project.insights.map((insight) => {
+        const link = document.createElement("a");
+        link.className = "insight-card";
+        link.href = insight.href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        const thumbnail = document.createElement("img");
+        thumbnail.className = "insight-card-image";
+        thumbnail.src = insight.image;
+        thumbnail.alt = "";
+
+        const copy = document.createElement("span");
+        copy.className = "insight-card-copy";
+
+        const meta = document.createElement("small");
+        meta.textContent = insight.meta;
+
+        const title = document.createElement("strong");
+        title.textContent = insight.title;
+
+        const description = document.createElement("span");
+        description.textContent = insight.description;
+
+        const arrow = document.createElement("i");
+        arrow.textContent = "↗";
+        arrow.setAttribute("aria-hidden", "true");
+
+        copy.append(meta, title, description);
+        link.append(thumbnail, copy, arrow);
+        return link;
+      }),
+    );
+  } else {
+    insightList.replaceChildren();
+  }
 
   clearPendingProject();
   if (animate) restartProjectMotion(activeImage);

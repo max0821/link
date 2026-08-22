@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#05060a">
-    <meta name="description" content="9sweb 的遊戲、工具、Skills 與實驗專案入口。">
+    <meta name="description" content="9sweb 的遊戲、工具與 AI 實作心得入口。">
     <meta property="og:type" content="website">
     <meta property="og:title" content="9sweb Projects">
-    <meta property="og:description" content="Games · Tools · Skills，一站收錄 9sweb 做過的專案。">
+    <meta property="og:description" content="Games · Tools · AI Notes，一站收錄 9sweb 做過的專案與實作心得。">
     <meta property="og:image" content="https://link.9sweb.com/assets/og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="9sweb Projects">
-    <meta name="twitter:description" content="Games · Tools · Skills，一站收錄 9sweb 做過的專案。">
+    <meta name="twitter:description" content="Games · Tools · AI Notes，一站收錄 9sweb 做過的專案與實作心得。">
     <meta name="twitter:image" content="https://link.9sweb.com/assets/og.png">
     <link rel="canonical" href="https://link.9sweb.com/">
     <title>9sweb Projects</title>
@@ -20,6 +20,7 @@
     <link rel="preload" href="/assets/lootsu-og.png" as="image" type="image/png">
     <link rel="preload" href="/assets/maxabounce-og.png" as="image" type="image/png">
     <link rel="preload" href="/assets/web-design-skill.png" as="image" type="image/png">
+    <link rel="preload" href="/assets/ai-social-linktree-thread.png" as="image" type="image/png">
     <link rel="stylesheet" href="./styles.css">
     <script src="./app.js" type="module"></script>
   </head>
@@ -66,7 +67,7 @@
             <span class="tab-number">02</span><span class="tab-name">星海打磚</span>
           </button>
           <button class="world-tab" type="button" data-project="2" aria-pressed="false">
-            <span class="tab-number">03</span><span class="tab-name">Web Design Skill</span>
+            <span class="tab-number">03</span><span class="tab-name">AI心得</span>
           </button>
           <span class="switch-glider" aria-hidden="true"></span>
         </nav>
@@ -76,11 +77,12 @@
             <img class="game-art active" data-project-image="0" src="/assets/lootsu-og.png" alt="" decoding="async" fetchpriority="high" aria-hidden="false">
             <img class="game-art" data-project-image="1" src="/assets/maxabounce-og.png" alt="" decoding="async" aria-hidden="true">
             <img class="game-art" data-project-image="2" src="/assets/web-design-skill.png" alt="" decoding="async" aria-hidden="true">
+            <img class="insight-art-secondary" src="/assets/ai-social-linktree-thread.png" alt="" decoding="async" aria-hidden="true">
             <div class="art-wash"></div>
             <div class="scanline"></div>
 
             <div class="stage-topline">
-              <span class="now-playing"><i aria-hidden="true"></i> FEATURED PROJECT</span>
+              <span class="now-playing"><i aria-hidden="true"></i><span class="now-playing-label">FEATURED PROJECT</span></span>
               <span class="game-number">01 / 03</span>
             </div>
 
@@ -91,6 +93,7 @@
               <div class="tag-row" aria-label="專案資訊">
                 <span>免下載</span><span>全台排行</span><span>手機直玩</span>
               </div>
+              <div class="insight-list" aria-label="AI 心得文章" hidden></div>
               <a class="play-button" href="https://lootsu.9sweb.com/">
                 <span>進廟擲筊</span><i aria-hidden="true">↗</i>
               </a>
@@ -106,7 +109,7 @@
 
         <footer>
           <span>© 9sweb</span>
-          <span>GAMES · TOOLS · SKILLS</span>
+          <span>GAMES · TOOLS · AI NOTES</span>
         </footer>
       </div>
     </main>
