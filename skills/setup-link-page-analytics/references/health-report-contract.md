@@ -33,6 +33,17 @@
 
 Do not treat an empty Realtime response as proof that GA is broken. Compare it with publish state, DebugView, historical data, event freshness, and local/browser evidence.
 
+## User-facing metric content
+
+Health checks answer whether tracking is configured correctly. The report must also include an analytics section that answers what happened during the report window:
+
+- traffic summary: total users, sessions, page views, all events, and engagement rate;
+- previous-period comparison for the same metrics when data is available;
+- CTA performance grouped by the registered CTA custom dimensions, including click count, clicking users, and click share;
+- daily trend rows for the traffic metrics.
+
+If a metric query fails or has no rows, show the limitation explicitly. Do not convert missing data into zero, and do not interpret a missing previous period as a negative change.
+
 ## Profile evolution
 
 When the site changes, update the site-specific profile rather than the API Core. Record:

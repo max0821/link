@@ -36,6 +36,7 @@ Return a concise report with:
 - authorization state and scopes, without secrets;
 - target site/profile version;
 - checks with expected vs observed evidence;
+- user-facing metrics: traffic summary, previous-period comparison, CTA ranking, and daily trend;
 - recent/realtime observation windows and limitations;
 - duplicate or drift findings;
 - recommended repair plan and required approval boundary;

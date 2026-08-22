@@ -1,6 +1,13 @@
 import { config } from "./config.mjs";
 import { auditAnalytics, CTA_CUSTOM_DIMENSIONS } from "./ga-admin.mjs";
-import { runEventHealthReport, runRealtimeLinkClickReport } from "./ga-data.mjs";
+import {
+  DEFAULT_REPORT_WINDOW,
+  runCtaPerformanceReport,
+  runEventHealthReport,
+  runRealtimeLinkClickReport,
+  runTrafficSummaryReport,
+  runTrafficTrendReport,
+} from "./ga-data.mjs";
 import { auditGtm } from "./gtm.mjs";
 import { scanLocalSite } from "./site-scan.mjs";
 import { link9swebProfile } from "./site-profile.mjs";
@@ -161,7 +168,7 @@ function buildObservationCheck(id, result, label) {
   );
 }
 
-export async function buildHealthReport(token, { includeObservations = true } = {}) {
+export async function buildHealthReport(token, { includeObservations = true, reportWindow = DEFAULT_REPORT_WINDOW } = {}) {
   const local = scanLocalSite();
   const [ga, gtm] = await Promise.all([auditAnalytics(token), auditGtm(token)]);
   const checks = [
@@ -170,21 +177,30 @@ export async function buildHealthReport(token, { includeObservations = true } = 
     ...buildGtmChecks(gtm),
   ];
   const observations = {};
+  const metrics = {};
 
   if (includeObservations) {
-    const [realtimeResult, recentResult] = await Promise.all([
+    const [realtimeResult, recentResult, traffic, previousTraffic, trend, ctaPerformance] = await Promise.all([
       runRealtimeLinkClickReport(token).catch((error) => ({ error: error.message })),
       runEventHealthReport(token).catch((error) => ({ error: error.message })),
+      runTrafficSummaryReport(token, reportWindow).catch((error) => ({ error: error.message })),
+      runTrafficSummaryReport(token, { startDate: reportWindow.previousStartDate, endDate: reportWindow.previousEndDate }).catch((error) => ({ error: error.message })),
+      runTrafficTrendReport(token, reportWindow).catch((error) => ({ error: error.message })),
+      runCtaPerformanceReport(token, reportWindow).catch((error) => ({ error: error.message })),
     ]);
     observations.realtime = realtimeResult;
     observations.recent = recentResult;
+    metrics.window = reportWindow;
+    metrics.traffic = { current: traffic, previous: previousTraffic };
+    metrics.dailyTrend = trend;
+    metrics.ctaPerformance = ctaPerformance;
     checks.push(buildObservationCheck("ga.realtime", realtimeResult, "GA4 Realtime link_click"));
     checks.push(buildObservationCheck("ga.recent_events", recentResult, "GA4 最近事件"));
   }
 
   return {
     reportType: "link-page-analytics-health",
-    reportVersion: "1.0.0",
+    reportVersion: "1.1.0",
     generatedAt: new Date().toISOString(),
     target: {
       site: link9swebProfile.id,
@@ -198,6 +214,7 @@ export async function buildHealthReport(token, { includeObservations = true } = 
     summary: summarizeChecks(checks),
     checks,
     observations,
+    metrics,
     evidence: { local, ga, gtm },
   };
 }

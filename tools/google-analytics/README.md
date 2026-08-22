@@ -89,5 +89,6 @@ npm run apply:gtm -- --confirm
 - 本工具沒有任何自動發布路徑；正式發布要由使用者在確認差異後另行批准。
 - `health` 會合併本機 site scan、GA Admin、GA Data Realtime/最近事件與 GTM workspace evidence。
 - `report` 會在 `tools/google-analytics/reports/` 產生 `latest.html`、`latest.md`、`latest.json` 與帶時間戳的歷史檔案；HTML 適合開啟給用戶看，Markdown 適合貼到訊息或工單，JSON 適合後續 AI 分析。
+- 閱讀版報表分成兩層：先顯示使用者、工作階段、頁面瀏覽、互動率、前期比較、CTA 點擊排行與每日趨勢，再顯示 GA/GTM 健康檢查與 Realtime/歷史事件證據。
 - `reports/` 僅供本機或受保護的報表服務使用，不應部署到公開 Link Page 或公開 GitHub Pages。
 - 觀測不到 Realtime 事件只會先標記 `WARN`，會和發布狀態及歷史事件一起判讀，不會直接當成 GA 故障。
