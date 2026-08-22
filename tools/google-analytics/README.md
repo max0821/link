@@ -4,6 +4,8 @@
 
 Codex Desktop 的 Google 授權流程請看 [OAUTH_ONBOARDING.md](./OAUTH_ONBOARDING.md)。預設先做本機掃描，再用 loopback OAuth 取得唯讀 API 權限；使用者自己完成 Google 登入與同意，Skill 不接觸密碼、OTP 或 token。
 
+若要了解完整的 Codex Desktop + Chrome + Google API + 報表操作流程，請看 [CODEX_DESKTOP_WORKFLOW.md](./CODEX_DESKTOP_WORKFLOW.md)。
+
 工具先產生 evidence 與 `PASS/WARN/FAIL/INFO`，再由上層 Skill 判斷是否需要建立修復 plan。它不依賴 Google SDK，使用 Node 內建 `fetch`，方便在本機或後端服務上執行。
 
 ## 目前已接上的事件契約

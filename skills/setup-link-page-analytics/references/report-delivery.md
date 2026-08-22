@@ -25,3 +25,5 @@ Do not place the report under the public Link Page, publish it as an unprotected
 ## Recurring operation
 
 The scheduled runner should call `npm run report`, retain the timestamped snapshot, compare the current summary with `history.json`, and notify only when the overall state changes or a new `FAIL`/`WARN` appears. A report with no recent events is normally a `WARN` and should include the observation window and the fact that Realtime may be fresher than the historical report.
+
+For the Codex Desktop and Chrome-specific onboarding, preview, DebugView, and local HTML rendering flow, read [../../../tools/google-analytics/CODEX_DESKTOP_WORKFLOW.md](../../../tools/google-analytics/CODEX_DESKTOP_WORKFLOW.md) from the project root.
