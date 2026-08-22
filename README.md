@@ -34,6 +34,12 @@
 - `MAX PROJECT INDEX` 使用 `clamp(rem, vw, rem)` 流動字級與依序字母跳動，並支援 `prefers-reduced-motion`。
 - 靜態資源使用 query version 避免 GitHub Pages／Cloudflare／瀏覽器混用舊版快取。
 
+## 流量分析
+
+- Google Tag Manager 容器：`GTM-W9BNQSDC`。
+- GTM `<script>` 位於 `<head>` 開頭，`<noscript>` iframe 位於 `<body>` 開頭。
+- GA4 的 Google Tag、評估 ID 與後續事件規則將統一由 GTM 管理。
+
 ## SEO 與 AI 索引
 
 - `index.html`：Canonical、hreflang、robots、Open Graph、Twitter metadata 與 JSON-LD。
