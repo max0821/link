@@ -264,8 +264,8 @@ button { border: 0; }
     border-color 0.55s ease, background 0.55s ease;
 }
 
-.arcade[data-world="maxabounce"] .switch-glider { transform: translateX(100%); }
-.arcade[data-world="ai-notes"] .switch-glider { transform: translateX(200%); }
+.arcade[data-world="lootsu"] .switch-glider { transform: translateX(100%); }
+.arcade[data-world="maxabounce"] .switch-glider { transform: translateX(200%); }
 
 .game-stage {
   --tilt-x: 0deg;
@@ -279,7 +279,8 @@ button { border: 0; }
 
 .stage-shell {
   position: relative;
-  min-height: clamp(430px, 115vw, 496px);
+  height: clamp(430px, 115vw, 496px);
+  max-height: 496px;
   overflow: hidden;
   border: 1px solid rgba(var(--accent-rgb), 0.5);
   border-radius: 3px 24px 3px 3px;
@@ -332,7 +333,8 @@ button { border: 0; }
 }
 
 .arcade[data-world="ai-notes"] .stage-shell {
-  min-height: 560px;
+  height: clamp(500px, 135vw, 520px);
+  max-height: 520px;
 }
 
 .arcade[data-world="ai-notes"] .game-art {
