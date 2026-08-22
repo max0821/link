@@ -67,7 +67,7 @@ Core Skill 的輸出不是「已安裝」，而是可被比較的 evidence：
 ## 本機指令
 
 ```powershell
-cd D:\game\link.9sweb.com\tools\google-analytics
+cd tools/google-analytics
 
 # 不需 OAuth：掃描 repo 與 site-specific tracking contract
 npm run health:local

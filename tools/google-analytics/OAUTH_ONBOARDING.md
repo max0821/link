@@ -38,7 +38,7 @@ OAuth Client ID/Secret 應放在 `tools/google-analytics/.env` 或外部 secret 
 ## Codex Desktop read-only flow
 
 ```powershell
-cd D:\game\link.9sweb.com\tools\google-analytics
+cd tools/google-analytics
 npm run auth:status
 npm run health:local
 npm run health:connect -- --confirm-read

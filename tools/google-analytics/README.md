@@ -45,7 +45,7 @@ GTM 只需要一個 Custom Event trigger `link_click`、六個 Data Layer Variab
 ## 指令
 
 ```powershell
-cd D:\game\link.9sweb.com\tools\google-analytics
+cd tools/google-analytics
 Copy-Item .env.example .env
 
 # 產生唯讀 OAuth URL
