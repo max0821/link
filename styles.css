@@ -133,7 +133,7 @@ button { border: 0; }
 
 .brand {
   display: block;
-  width: clamp(168px, 48vw, 196px);
+  width: clamp(172px, 52vw, 224px);
   text-decoration: none;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.45));
 }
