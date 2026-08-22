@@ -192,6 +192,7 @@ export async function buildHealthReport(token, { includeObservations = true } = 
       gaPropertyId: config.gaPropertyId,
       gaMeasurementId: config.gaMeasurementId,
       gtmContainerId: config.gtmContainerId,
+      gtmContainerPublicId: config.gtmContainerPublicId,
       gtmWorkspaceId: config.gtmWorkspaceId,
     },
     summary: summarizeChecks(checks),

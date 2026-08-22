@@ -8,6 +8,8 @@
     "auth:connect": "node src/cli.mjs auth:connect",
     "health:local": "node src/cli.mjs health:local",
     "health": "node src/cli.mjs health",
+    "report": "node src/cli.mjs report",
+    "report:connect": "node src/cli.mjs report:connect --confirm-read",
     "health:connect": "node src/cli.mjs health:connect",
     "audit": "node src/cli.mjs audit",
     "validate": "node src/cli.mjs validate",

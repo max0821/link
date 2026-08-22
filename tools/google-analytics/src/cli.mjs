@@ -6,6 +6,7 @@ import { getDataMetadata, runRealtimeLinkClickReport } from "./ga-data.mjs";
 import { validateMeasurementProtocolEvent } from "./measurement-protocol.mjs";
 import { applyCtaGtmChangeSet, auditGtm, buildCtaGtmChangeSet, publishGtmWorkspace } from "./gtm.mjs";
 import { buildHealthReport } from "./health-report.mjs";
+import { writeHealthReportArtifacts } from "./report-renderer.mjs";
 import { scanLocalSite } from "./site-scan.mjs";
 import { authenticateInBrowser } from "./auth-onboarding.mjs";
 import { persistRefreshToken } from "./config.mjs";
@@ -44,11 +45,11 @@ async function main() {
   }
 
   if (command === "help") {
-    console.log("用法：npm run auth:status | npm run auth:connect | npm run health:connect | npm run auth:url | npm run health:local | npm run health | npm run audit | npm run validate | npm run realtime | npm run plan:gtm | npm run apply:gtm -- --confirm");
+    console.log("用法：npm run auth:status | npm run auth:connect | npm run health:connect | npm run auth:url | npm run health:local | npm run health | npm run report | npm run report:connect | npm run audit | npm run validate | npm run realtime | npm run plan:gtm | npm run apply:gtm -- --confirm");
     return;
   }
 
-  if (command === "auth:connect" || command === "health:connect") {
+  if (command === "auth:connect" || command === "health:connect" || command === "report:connect") {
     if (!process.argv.includes("--confirm-read")) {
       throw new Error("需要先取得使用者明確同意唯讀 Google API 授權；同意後再加上 --confirm-read。未取得同意時不會開啟 OAuth。");
     }
@@ -65,6 +66,11 @@ async function main() {
       console.log(JSON.stringify({ authorized: true, scope: oauth.scope || "", hasRefreshToken: Boolean(oauth.refresh_token), tokenStored: Boolean(oauth.refresh_token) }, null, 2));
       return;
     }
+    if (command === "report:connect") {
+      const report = await buildHealthReport(oauth.access_token);
+      print(writeHealthReportArtifacts(report));
+      return;
+    }
     print(await buildHealthReport(oauth.access_token));
     return;
   }
@@ -78,6 +84,12 @@ async function main() {
 
   if (command === "health") {
     print(await buildHealthReport(token));
+    return;
+  }
+
+  if (command === "report") {
+    const report = await buildHealthReport(token);
+    print(writeHealthReportArtifacts(report));
     return;
   }
 

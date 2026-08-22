@@ -1,3 +1,4 @@
 .env
+reports/
 .tokens/
 *.log

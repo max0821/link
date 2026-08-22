@@ -27,6 +27,7 @@ Keep two layers separate:
 7. Have the AI explain root causes, confidence, and the smallest repair plan. Do not mutate GA/GTM until the user explicitly approves the proposed change.
 8. For approved repairs, use idempotent workspace changes, inspect existing objects, detect conflicts/fingerprints, validate in Preview/DebugView, then request separate approval before version creation or production publish.
 9. After a DOM, CTA, event, deployment, or reporting requirement changes, update the site-specific profile version and rerun the report. Do not weaken a failing check just to make the score pass.
+10. For user delivery, render the report into local `latest.html`, `latest.md`, and `latest.json` plus timestamped history. Keep the report outside the public Link Page; only deliver it through a private, access-controlled channel.
 
 ## Required output
 
@@ -39,5 +40,7 @@ Return a concise report with:
 - duplicate or drift findings;
 - recommended repair plan and required approval boundary;
 - verification evidence and next check.
+
+For report rendering and delivery, read [references/report-delivery.md](references/report-delivery.md).
 
 Read [references/oauth-onboarding.md](references/oauth-onboarding.md) for the Codex Desktop authorization contract and [references/health-report-contract.md](references/health-report-contract.md) for report semantics and routing.

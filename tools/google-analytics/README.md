@@ -61,6 +61,9 @@ npm run health:local
 # 需要唯讀 OAuth：產生完整健康報告
 npm run health
 
+# 需要唯讀 OAuth：產生用戶閱讀版與 AI evidence 檔案
+npm run report
+
 # 取得 plan，不呼叫 Google 寫入 API
 npm run plan:gtm
 
@@ -85,4 +88,6 @@ npm run apply:gtm -- --confirm
 - GA4 custom dimension 建立可用 Admin API 的 `ensureCtaCustomDimensions`，但目前 CLI 未自動執行，以避免在 property 尚未核對時誤寫入。
 - 本工具沒有任何自動發布路徑；正式發布要由使用者在確認差異後另行批准。
 - `health` 會合併本機 site scan、GA Admin、GA Data Realtime/最近事件與 GTM workspace evidence。
+- `report` 會在 `tools/google-analytics/reports/` 產生 `latest.html`、`latest.md`、`latest.json` 與帶時間戳的歷史檔案；HTML 適合開啟給用戶看，Markdown 適合貼到訊息或工單，JSON 適合後續 AI 分析。
+- `reports/` 僅供本機或受保護的報表服務使用，不應部署到公開 Link Page 或公開 GitHub Pages。
 - 觀測不到 Realtime 事件只會先標記 `WARN`，會和發布狀態及歷史事件一起判讀，不會直接當成 GA 故障。
