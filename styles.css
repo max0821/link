@@ -337,6 +337,14 @@ button { border: 0; }
   max-height: 520px;
 }
 
+.arcade[data-world="ai-notes"] .stage-copy {
+  top: 225px;
+  bottom: 18px;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+}
+
 .arcade[data-world="ai-notes"] .game-art {
   top: 47px;
   right: auto;
@@ -472,6 +480,26 @@ button { border: 0; }
   display: grid;
   gap: 8px;
   margin-top: 15px;
+}
+
+.arcade[data-world="ai-notes"] .insight-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding-right: 4px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: rgba(201, 255, 99, 0.45) transparent;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.arcade[data-world="ai-notes"] .insight-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.arcade[data-world="ai-notes"] .insight-list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(201, 255, 99, 0.45);
 }
 
 .insight-card {
