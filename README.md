@@ -39,6 +39,13 @@
 - Google Tag Manager 容器：`GTM-W9BNQSDC`。
 - GTM `<script>` 位於 `<head>` 開頭，`<noscript>` iframe 位於 `<body>` 開頭。
 - GA4 的 Google Tag、評估 ID 與後續事件規則將統一由 GTM 管理。
+- CTA 使用通用 `link_click` dataLayer event；追蹤欄位為 `link_id`、`link_name`、`link_url`、`link_type`、`link_position`、`section_name`。
+- 具體 CTA 以 `data-track-*` 屬性標記，GTM 只需要一個 Custom Event trigger 與一個 GA4 Event tag。
+- 目前核心目標是持續產生 Analytics Health Report；GA/GTM 設定只是健康檢查發現問題後的選擇性修復。
+- 工具分成穩定的 Analytics API Core，以及會隨網站 DOM、CTA 與部署方式變化而版本化重寫的 Site-specific Analysis Skill。
+- API-first 工具、健康報告與兩層 Skill 架構位於 [`tools/google-analytics/`](tools/google-analytics/)，預設唯讀，GTM 建立與發布不會自動執行。
+- 本機網站檢查：`npm run health:local`；合併 Google evidence 的完整報告：`npm run health`。
+- 可載入 Codex Desktop 的 Skill source 位於 [`skills/setup-link-page-analytics/`](skills/setup-link-page-analytics/)，包含 OAuth onboarding、health report contract 與 site-specific profile 演進規則。
 
 ## SEO 與 AI 索引
 

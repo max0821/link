@@ -1,0 +1,19 @@
+{
+  "name": "link-9sweb-google-analytics-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "auth:url": "node src/cli.mjs auth:url",
+    "auth:status": "node src/cli.mjs auth:status",
+    "auth:connect": "node src/cli.mjs auth:connect",
+    "health:local": "node src/cli.mjs health:local",
+    "health": "node src/cli.mjs health",
+    "health:connect": "node src/cli.mjs health:connect",
+    "audit": "node src/cli.mjs audit",
+    "validate": "node src/cli.mjs validate",
+    "realtime": "node src/cli.mjs realtime",
+    "plan:gtm": "node src/cli.mjs plan:gtm",
+    "apply:gtm": "node src/cli.mjs apply:gtm",
+    "publish:gtm": "node src/cli.mjs publish:gtm"
+  }
+}

@@ -19,6 +19,8 @@ const projects = Object.freeze([
         description: "說明及安裝方式",
         image: "./assets/web-design-skill.png",
         href: "https://github.com/max0821/web-design-skill",
+        trackId: "ai-web-design-skill",
+        trackType: "article",
       },
       {
         date: "2026.08.22",
@@ -28,6 +30,8 @@ const projects = Object.freeze([
         description: "GitHub 免費免主機，ChatGPT 連動後輕鬆搞定",
         image: "./assets/ai-social-linktree-thread.png",
         href: "https://www.threads.com/share/FalBiuCAX/",
+        trackId: "ai-social-linktree",
+        trackType: "social",
       },
     ],
     accent: "#c9ff63",
@@ -78,6 +82,53 @@ const nowPlayingLabel = document.querySelector(".now-playing-label");
 const edgeLabel = document.querySelector(".edge-label");
 const stageCopy = document.querySelector(".stage-copy");
 const tabs = [...document.querySelectorAll(".world-tab")];
+
+const trackingDefaults = Object.freeze({
+  section: "project-index",
+  position: "1",
+});
+
+function setTrackingAttributes(element, attributes) {
+  if (!element) return;
+  const values = {
+    id: attributes.id,
+    name: attributes.name,
+    type: attributes.type,
+    position: attributes.position ?? trackingDefaults.position,
+    section: attributes.section ?? trackingDefaults.section,
+  };
+  Object.entries(values).forEach(([key, value]) => {
+    if (value !== undefined && value !== null && value !== "") {
+      element.dataset[`track${key[0].toUpperCase()}${key.slice(1)}`] = String(value);
+    }
+  });
+}
+
+function pushLinkClick(link) {
+  const data = link?.dataset;
+  if (!data?.trackId) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "link_click",
+    link_id: data.trackId,
+    link_name: data.trackName || link.textContent.trim(),
+    link_url: link.href,
+    link_type: data.trackType || "external",
+    link_position: data.trackPosition || trackingDefaults.position,
+    section_name: data.trackSection || trackingDefaults.section,
+  });
+}
+
+window.dataLayer = window.dataLayer || [];
+
+document.addEventListener("click", (event) => {
+  const link = event.target instanceof Element
+    ? event.target.closest("a[data-track-id]")
+    : null;
+  pushLinkClick(link);
+});
+
 
 let activeIndex = 0;
 let pendingIndex = null;
@@ -185,6 +236,20 @@ function commitProject(nextIndex, animate = true) {
 
   projectLink.href = project.href;
   projectLinkLabel.textContent = project.cta;
+  if (project.href.startsWith("http")) {
+    projectLink.target = "_blank";
+    projectLink.rel = "noopener noreferrer";
+  } else {
+    projectLink.removeAttribute("target");
+    projectLink.removeAttribute("rel");
+  }
+  setTrackingAttributes(projectLink, {
+    id: `project-${project.id}`,
+    name: project.title,
+    type: "project",
+    position: project.number,
+    section: project.id,
+  });
 
   const hasInsights = Array.isArray(project.insights) && project.insights.length > 0;
   projectTags.hidden = hasInsights;
@@ -199,6 +264,13 @@ function commitProject(nextIndex, animate = true) {
         link.href = insight.href;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
+        setTrackingAttributes(link, {
+          id: insight.trackId || `${project.id}-${insight.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+          name: insight.title,
+          type: insight.trackType || "article",
+          position: String(project.insights.indexOf(insight) + 1),
+          section: project.id,
+        });
 
         const thumbnail = document.createElement("img");
         thumbnail.className = "insight-card-image";

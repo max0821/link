@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Link Page Analytics"
+  short_description: "Evolving GA4 and GTM health reports"
+  default_prompt: "Use $setup-link-page-analytics to connect Google read-only APIs and generate a site-specific health report."
