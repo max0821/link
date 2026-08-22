@@ -148,9 +148,10 @@ button { border: 0; }
   display: flex;
   align-items: center;
   gap: 7px;
-  color: rgba(255, 255, 255, 0.58);
-  font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.72);
+  font: 800 clamp(9px, 2.6vw, 11px)/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: clamp(0.8px, 0.25vw, 1.2px);
+  white-space: nowrap;
 }
 
 .live-dot {
@@ -160,19 +161,6 @@ button { border: 0; }
   background: #6fff9b;
   box-shadow: 0 0 10px #6fff9b;
   animation: live-pulse 1.8s ease-in-out infinite;
-}
-
-.intro {
-  padding-top: 16px;
-  animation: enter-up 0.75s 0.08s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.eyebrow {
-  color: var(--accent);
-  font: 800 clamp(11px, 3.2vw, 14px)/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: clamp(1px, 0.45vw, 1.8px);
-  white-space: nowrap;
-  transition: color 0.55s ease;
 }
 
 .world-switch {
@@ -740,7 +728,6 @@ footer {
   .mobile-canvas { padding-right: 14px; padding-left: 14px; }
   .brand-bar { height: 58px; }
   .brand { width: 154px; }
-  .intro { padding-top: 12px; }
   .world-tab { font-size: 10px; letter-spacing: 0.02em; }
   .tab-number { display: none; }
   .stage-shell { min-height: 422px; }
