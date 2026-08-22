@@ -1,4 +1,4 @@
-# link.9sweb.com Analytics Health / GA4 / GTM API-first 工具
+# Link Page Analytics Health / GA4 / GTM API-first 工具
 
 這個目錄的核心是「持續產生健康報告」，不是一次性的 GA 安裝器。設定與修復只是報告發現問題後的選擇性 action。整體兩層設計請看 [SKILL_ARCHITECTURE.md](./SKILL_ARCHITECTURE.md)：穩定的 Analytics API Core，加上會隨網站需求與 DOM 改變而持續重寫的 Site-specific Analysis Skill。
 

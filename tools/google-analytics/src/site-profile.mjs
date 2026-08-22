@@ -1,3 +1,5 @@
+import { config } from "./config.mjs";
+
 // Site-specific analysis is deliberately kept outside the Google API layer.
 // This profile is expected to change as the site's DOM, CTA taxonomy, or
 // deployment model changes.
@@ -7,8 +9,8 @@ export const link9swebProfile = Object.freeze({
   repoRoot: "workspace",
   files: ["index.html", "app.js"],
   expected: {
-    gtmPublicId: "GTM-W9BNQSDC",
-    measurementId: "G-4N0V6SDWH1",
+    gtmPublicId: config.gtmContainerPublicId,
+    measurementId: config.gaMeasurementId,
     eventName: "link_click",
     eventParameters: [
       "link_id",

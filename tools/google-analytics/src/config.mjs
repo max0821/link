@@ -32,11 +32,11 @@ export const config = Object.freeze({
   refreshToken: process.env.GOOGLE_REFRESH_TOKEN || "",
   accessToken: process.env.GOOGLE_ACCESS_TOKEN || "",
   gaPropertyId: process.env.GA_PROPERTY_ID || "",
-  gaMeasurementId: process.env.GA_MEASUREMENT_ID || "G-4N0V6SDWH1",
-  gtmAccountId: process.env.GTM_ACCOUNT_ID || "6372743106",
-  gtmContainerId: process.env.GTM_CONTAINER_ID || "261954347",
-  gtmWorkspaceId: process.env.GTM_WORKSPACE_ID || "3",
-  gtmContainerPublicId: process.env.GTM_CONTAINER_PUBLIC_ID || "GTM-W9BNQSDC",
+  gaMeasurementId: process.env.GA_MEASUREMENT_ID || "",
+  gtmAccountId: process.env.GTM_ACCOUNT_ID || "",
+  gtmContainerId: process.env.GTM_CONTAINER_ID || "",
+  gtmWorkspaceId: process.env.GTM_WORKSPACE_ID || "",
+  gtmContainerPublicId: process.env.GTM_CONTAINER_PUBLIC_ID || "",
 });
 
 export function persistRefreshToken(refreshToken) {

@@ -1,6 +1,6 @@
 # GA4 / GTM × Codex Desktop 工作流程
 
-這份文件定義 `link.9sweb.com` 在 Codex Desktop 中使用 GA4、GTM、Chrome 與 Google API 的標準流程。
+這份文件定義 Link Page repository 在 Codex Desktop 中使用 GA4、GTM、Chrome 與 Google API 的標準流程。
 
 核心原則是：
 
@@ -13,9 +13,9 @@
 
 - Repository root：clone 後的專案根目錄
 - Google 工具目錄：`tools/google-analytics`
-- 網站：`https://link.9sweb.com/`
-- GTM：`GTM-W9BNQSDC`
-- GA4 Measurement ID：`G-4N0V6SDWH1`
+- 網站：由 site profile 設定的 `<SITE_URL>`
+- GTM Container Public ID：由 `.env`／site profile 提供的 `<GTM_CONTAINER_PUBLIC_ID>`
+- GA4 Measurement ID：由 `.env`／site profile 提供的 `<GA_MEASUREMENT_ID>`
 - 網站事件：`link_click`
 
 ## 整體流程
@@ -55,7 +55,7 @@ npm run health:local
 這一步不需要 Google 權杖，先確認：
 
 - `index.html` 只有一組標準 GTM 安裝片段；
-- GTM ID 是 `GTM-W9BNQSDC`；
+- GTM ID 與 `.env`／site profile 的目標設定一致；
 - CTA 有完整 `data-track-*` 標記；
 - `app.js` 會推送 `link_click` 與 CTA 參數；
 - site-specific profile 與目前 repo 相符。

@@ -36,7 +36,7 @@
 
 ## 流量分析
 
-- Google Tag Manager 容器：`GTM-W9BNQSDC`。
+- Google Tag Manager 容器：由網站的 site profile 與部署設定提供；公共文件不固定記錄實例 ID。
 - GTM `<script>` 位於 `<head>` 開頭，`<noscript>` iframe 位於 `<body>` 開頭。
 - GA4 的 Google Tag、評估 ID 與後續事件規則將統一由 GTM 管理。
 - CTA 使用通用 `link_click` dataLayer event；追蹤欄位為 `link_id`、`link_name`、`link_url`、`link_type`、`link_position`、`section_name`。

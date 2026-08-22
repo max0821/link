@@ -40,7 +40,7 @@ Core Skill 的輸出不是「已安裝」，而是可被比較的 evidence：
 - 判斷 duplicate event、遺漏 CTA、錯誤 URL、區段與位置
 - 產生 site profile 與健康檢查規則
 
-目前 `src/site-profile.mjs` 是 `link.9sweb.com` 的第一版 profile。網站 DOM 或需求改變時，應增加 profile version，而不是修改 API Core 的通用邏輯。
+目前 `src/site-profile.mjs` 是這個 repository 的第一版 site profile。網站 DOM 或需求改變時，應增加 profile version，而不是修改 API Core 的通用邏輯。
 
 ## 持續重寫循環
 
