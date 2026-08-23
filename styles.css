@@ -144,6 +144,13 @@ button { border: 0; }
   height: auto;
 }
 
+.brand-tools {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+  min-width: 0;
+}
+
 .brand-meta {
   display: flex;
   flex: 0 0 auto;
@@ -171,6 +178,54 @@ button { border: 0; }
 }
 
 .brand-space { width: 0.48em; }
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 20px;
+  padding: 3px 6px;
+  border: 1px solid rgba(201, 255, 99, 0.26);
+  border-radius: 999px;
+  color: rgba(245, 241, 232, 0.72);
+  text-decoration: none;
+  font: 700 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.35px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: var(--accent);
+  background: rgba(201, 255, 99, 0.1);
+  color: var(--paper);
+}
+
+.social-mark {
+  display: grid;
+  width: 14px;
+  height: 14px;
+  place-items: center;
+  border: 1px solid currentColor;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.social-mark-threads { border-radius: 50%; }
+
+.social-mark-github {
+  border-radius: 4px;
+  font-size: 7px;
+  letter-spacing: -0.6px;
+}
 
 .live-dot {
   flex: 0 0 auto;
@@ -237,6 +292,7 @@ button { border: 0; }
 .world-tab:focus-visible,
 .play-button:focus-visible,
 .insight-card:focus-visible,
+.social-link:focus-visible,
 .brand:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
