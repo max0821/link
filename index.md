@@ -10,12 +10,12 @@
 
 ## AI 心得
 
-### Web Design Skill
+### 用 AI 做 GA4 / GTM 成長報告
 
-- 發文日：2026-08-22
-- 類型：Agent Skill
-- 說明：Web Design Skill 的使用說明、安裝方式與原始碼。
-- 正式連結：https://github.com/max0821/web-design-skill
+- 發文日：2026-08-23
+- 類型：GA4 / GTM 實作
+- 說明：把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務；報表留在私有環境，不把 OAuth 或分析資料部署到公開頁面。
+- 正式連結：https://github.com/max0821/link/tree/main/tools/google-analytics
 
 ### 免費客製自己的 Social Linktree
 
@@ -24,12 +24,12 @@
 - 說明：利用 ChatGPT 連動 GitHub，建立免費、免主機且具完整自主權的 Social Link 引導頁；Cloudflare 為可選設定。
 - 正式連結：https://www.threads.com/share/FalBiuCAX/
 
-### 用 AI 做 GA4 / GTM 成長報告
+### Web Design Skill
 
-- 發文日：2026-08-23
-- 類型：GA4 / GTM 實作
-- 說明：把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務；報表留在私有環境，不把 OAuth 或分析資料部署到公開頁面。
-- 正式連結：https://github.com/max0821/link/tree/main/tools/google-analytics
+- 發文日：2026-08-22
+- 類型：Agent Skill
+- 說明：Web Design Skill 的使用說明、安裝方式與原始碼。
+- 正式連結：https://github.com/max0821/web-design-skill
 
 ## 免費手機網頁遊戲
 

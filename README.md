@@ -8,9 +8,9 @@
 
 ### 01 · AI 心得
 
-- [Web Design Skill](https://github.com/max0821/web-design-skill) — 說明及安裝方式，發布於 2026-08-22。
-- [免費客製自己的 Social Linktree](https://www.threads.com/share/FalBiuCAX/) — 使用 ChatGPT 連動 GitHub，建立免費、免主機且具自主權的 Social Link 引導頁，發布於 2026-08-22。
 - [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/link/tree/main/tools/google-analytics) — 把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務，發布於 2026-08-23。
+- [免費客製自己的 Social Linktree](https://www.threads.com/share/FalBiuCAX/) — 使用 ChatGPT 連動 GitHub，建立免費、免主機且具自主權的 Social Link 引導頁，發布於 2026-08-22。
+- [Web Design Skill](https://github.com/max0821/web-design-skill) — 說明及安裝方式，發布於 2026-08-22。
 
 心得清單位於固定高度的專案卡片內；內容增加後會獨立上下捲動，不會持續拉長整頁。
 

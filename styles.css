@@ -528,8 +528,8 @@ button { border: 0; }
 
 .insight-card-copy small {
   color: var(--accent);
-  font: 700 7px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: 1.25px;
+  font: 700 8.5px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.7px;
 }
 
 .insight-card-copy strong {
