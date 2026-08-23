@@ -8,7 +8,7 @@
 
 ### 01 · AI 心得
 
-- [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/link/tree/main/tools/google-analytics) — 把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務，發布於 2026-08-23。
+- [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/ga4-gtm-analytics-health) — 獨立、通用的 GA4/GTM Analytics Health Codex Skill，發布於 2026-08-23。
 - [免費客製自己的 Social Linktree](https://www.threads.com/share/FalBiuCAX/) — 使用 ChatGPT 連動 GitHub，建立免費、免主機且具自主權的 Social Link 引導頁，發布於 2026-08-22。
 - [Web Design Skill](https://github.com/max0821/web-design-skill) — 說明及安裝方式，發布於 2026-08-22。
 

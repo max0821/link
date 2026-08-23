@@ -15,7 +15,7 @@
 - 發文日：2026-08-23
 - 類型：GA4 / GTM 實作
 - 說明：把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務；報表留在私有環境，不把 OAuth 或分析資料部署到公開頁面。
-- 正式連結：https://github.com/max0821/link/tree/main/tools/google-analytics
+- 正式連結：https://github.com/max0821/ga4-gtm-analytics-health
 
 ### 免費客製自己的 Social Linktree
 

@@ -10,7 +10,7 @@
 
 ## AI notes
 
-- [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/link/tree/main/tools/google-analytics): 把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務；報表留在私有環境。
+- [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/ga4-gtm-analytics-health): 獨立、通用的 GA4/GTM Analytics Health Codex Skill；報表留在私有環境。
 - [免費客製自己的 Social Linktree](https://www.threads.com/share/FalBiuCAX/): 使用 ChatGPT、GitHub Pages 與可選的 Cloudflare 自製免費 Social Link 引導頁。
 - [Web Design Skill](https://github.com/max0821/web-design-skill): Web Design Agent Skill 的說明、安裝與原始碼。
 

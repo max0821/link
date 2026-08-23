@@ -18,8 +18,8 @@ const projects = Object.freeze([
         meta: "01 / GA4 + GTM",
         title: "用 AI 做 GA4 / GTM 成長報告",
         description: "把唯讀數據整理成可驗證的每日成長任務",
-        image: "./assets/og.png",
-        href: "https://github.com/max0821/link/tree/main/tools/google-analytics",
+        image: "./assets/ga4-gtm-analytics-health.png",
+        href: "https://github.com/max0821/ga4-gtm-analytics-health",
         trackId: "ai-ga-growth-report",
         trackType: "analytics",
       },
@@ -272,7 +272,9 @@ function commitProject(nextIndex, animate = true) {
     insightList.replaceChildren(
       ...project.insights.map((insight) => {
         const link = document.createElement("a");
-        link.className = "insight-card";
+        link.className = insight.trackType === "analytics"
+          ? "insight-card insight-card-featured"
+          : "insight-card";
         link.href = insight.href;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
