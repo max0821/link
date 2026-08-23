@@ -6,7 +6,8 @@ const projects = Object.freeze([
     kicker: "BUILD IN PUBLIC · AI NOTES",
     title: "AI心得",
     description: "把我實際用 ChatGPT 做 Skill、做免費 Social Link 的過程，整理成可以直接照著做的方法。",
-    image: "./assets/web-design-skill.png",
+    // 固定的 AI 心得主圖；文章縮圖只由 insights 使用，不會反過來決定主圖。
+    image: "./assets/ai-notes-cover.svg",
     href: "#",
     cta: "查看心得",
     tags: ["ChatGPT", "實作筆記", "免費分享"],

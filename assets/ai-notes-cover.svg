@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">9sweb AI Notes</title>
+  <desc id="desc">A fixed neon interface cover for the 9sweb AI implementation notes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b18"/>
+      <stop offset="0.52" stop-color="#0a1110"/>
+      <stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9ff63" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#c9ff63" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#c9ff63" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#c9ff63" stroke-opacity="0.09"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <path d="M0 620C220 545 350 730 560 630S940 520 1200 610" fill="none" stroke="url(#beam)" stroke-width="2"/>
+  <path d="M0 650C220 575 350 760 560 660S940 550 1200 640" fill="none" stroke="#c9ff63" stroke-opacity="0.12" stroke-width="1"/>
+
+  <g fill="none" stroke="#c9ff63" stroke-opacity="0.5">
+    <circle cx="870" cy="286" r="162" stroke-width="2"/>
+    <circle cx="870" cy="286" r="118" stroke-dasharray="8 18"/>
+    <circle cx="870" cy="286" r="62" stroke-width="2"/>
+    <path d="M708 286h324M870 124v324" stroke-opacity="0.24"/>
+  </g>
+  <g fill="#c9ff63" filter="url(#glow)">
+    <circle cx="870" cy="286" r="7"/>
+    <circle cx="738" cy="201" r="4"/>
+    <circle cx="1012" cy="356" r="4"/>
+  </g>
+
+  <g fill="#c9ff63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="82" y="116" font-size="22" letter-spacing="8" opacity="0.82">BUILD IN PUBLIC</text>
+    <text x="78" y="300" font-size="116" font-weight="800" letter-spacing="-5">AI</text>
+    <text x="82" y="398" font-size="116" font-weight="800" letter-spacing="-5" fill="#f5f1e8">NOTES</text>
+    <text x="86" y="455" font-size="20" letter-spacing="5" opacity="0.72">SKILLS · EXPERIMENTS · SYSTEMS</text>
+  </g>
+
+  <g transform="translate(86 570)" fill="none" stroke="#c9ff63" stroke-width="2">
+    <rect width="390" height="88" rx="4" stroke-opacity="0.52"/>
+    <path d="M26 30h126M26 50h206M26 70h170" stroke-opacity="0.42"/>
+    <circle cx="334" cy="44" r="18" stroke-opacity="0.8"/>
+    <path d="m326 44 7 7 13-16"/>
+  </g>
+  <text x="111" y="622" fill="#c9ff63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" opacity="0.8">REAL WORK / CLEAR NOTES</text>
+</svg>
