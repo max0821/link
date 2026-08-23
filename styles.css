@@ -340,10 +340,10 @@ button { border: 0; }
 
 .arcade[data-world="ai-notes"] .game-art {
   top: 47px;
-  right: auto;
+  right: 12px;
   bottom: auto;
   left: 12px;
-  width: 61%;
+  width: calc(100% - 24px);
   height: 38%;
   padding: 10px;
   object-fit: contain;
@@ -373,8 +373,7 @@ button { border: 0; }
 }
 
 .arcade[data-world="ai-notes"] .insight-art-secondary {
-  display: block;
-  animation: secondary-art-enter 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  display: none;
 }
 
 .art-wash {
