@@ -1,6 +1,6 @@
 # 9sweb Projects
 
-> 9sweb 的手機優先專案入口，收錄 AI 實作心得、開源 Skill 與免費網頁遊戲。
+> 9sweb 的手機優先專案入口，收錄 AI 實作心得、GA4/GTM 成長分析、開源 Skill 與免費網頁遊戲。
 
 主要語言為繁體中文（zh-Hant-TW）。網站使用純 HTML、CSS、JavaScript 與本地圖片資產，Canonical URL 為 https://link.9sweb.com/ 。
 
@@ -12,6 +12,7 @@
 
 - [Web Design Skill](https://github.com/max0821/web-design-skill): Web Design Agent Skill 的說明、安裝與原始碼。
 - [免費客製自己的 Social Linktree](https://www.threads.com/share/FalBiuCAX/): 使用 ChatGPT、GitHub Pages 與可選的 Cloudflare 自製免費 Social Link 引導頁。
+- [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/link/tree/main/tools/google-analytics): 把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務；報表留在私有環境。
 
 ## Web games
 

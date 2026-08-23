@@ -10,6 +10,7 @@
 
 - [Web Design Skill](https://github.com/max0821/web-design-skill) — 說明及安裝方式，發布於 2026-08-22。
 - [免費客製自己的 Social Linktree](https://www.threads.com/share/FalBiuCAX/) — 使用 ChatGPT 連動 GitHub，建立免費、免主機且具自主權的 Social Link 引導頁，發布於 2026-08-22。
+- [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/link/tree/main/tools/google-analytics) — 把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務，發布於 2026-08-23。
 
 心得清單位於固定高度的專案卡片內；內容增加後會獨立上下捲動，不會持續拉長整頁。
 
@@ -49,7 +50,7 @@
 
 ## SEO 與 AI 索引
 
-- `index.html`：Canonical、hreflang、robots、Open Graph、Twitter metadata 與 JSON-LD。
+- `index.html`：Canonical、hreflang、robots、Open Graph、Twitter metadata 與 JSON-LD，並同步列出 GA4/GTM 成長分析心得。
 - `robots.txt`：允許一般搜尋引擎，以及 OAI-SearchBot、GPTBot、ChatGPT-User、Claude-SearchBot、Claude-User、ClaudeBot。
 - `sitemap.xml`：Canonical 首頁與主要分享圖片。
 - `llms.txt`：提供 LLM／Agent 使用的精簡內容索引。

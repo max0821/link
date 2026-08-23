@@ -1,11 +1,11 @@
 # 9sweb Projects
 
-> AI 實作心得、開源 Web Design Skill 與免費手機網頁遊戲的專案入口。
+> AI 實作心得、開源 Web Design Skill、GA4/GTM 成長分析與免費手機網頁遊戲的專案入口。
 
 - 網站：https://link.9sweb.com/
 - 作者：max0821
 - 語言：繁體中文（zh-Hant-TW）
-- 更新日期：2026-08-22
+- 更新日期：2026-08-23
 - 前端：純 HTML、CSS、JavaScript 與本地圖片資產
 
 ## AI 心得
@@ -23,6 +23,13 @@
 - 類型：Social Link 實作
 - 說明：利用 ChatGPT 連動 GitHub，建立免費、免主機且具完整自主權的 Social Link 引導頁；Cloudflare 為可選設定。
 - 正式連結：https://www.threads.com/share/FalBiuCAX/
+
+### 用 AI 做 GA4 / GTM 成長報告
+
+- 發文日：2026-08-23
+- 類型：GA4 / GTM 實作
+- 說明：把唯讀 GA4/GTM 健康檢查、CTA 成效與每日快照整理成可驗證的成長任務；報表留在私有環境，不把 OAuth 或分析資料部署到公開頁面。
+- 正式連結：https://github.com/max0821/link/tree/main/tools/google-analytics
 
 ## 免費手機網頁遊戲
 
