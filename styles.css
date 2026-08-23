@@ -401,8 +401,8 @@ button { border: 0; }
   left: 12px;
   width: calc(100% - 24px);
   height: 38%;
-  padding: 10px;
-  object-fit: contain;
+  padding: 0;
+  object-fit: cover;
   object-position: center;
   background:
     linear-gradient(135deg, rgba(201, 255, 99, 0.11), transparent 56%),
@@ -575,33 +575,6 @@ button { border: 0; }
   background: #0a0c0b;
   object-fit: cover;
   object-position: center top;
-}
-
-.insight-card-featured {
-  grid-template-columns: minmax(0, 1fr) 28px;
-  grid-template-rows: auto auto;
-  align-items: start;
-}
-
-.insight-card-featured .insight-card-image {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.insight-card-featured .insight-card-copy {
-  grid-column: 1;
-  grid-row: 2;
-  align-self: center;
-}
-
-.insight-card-featured > i {
-  grid-column: 2;
-  grid-row: 2;
 }
 
 .insight-card-copy {

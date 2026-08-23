@@ -7,7 +7,7 @@ const projects = Object.freeze([
     title: "AI心得",
     description: "把我實際用 ChatGPT 做 Skill、做免費 Social Link 的過程，整理成可以直接照著做的方法。",
     // 固定的 AI 心得主圖；文章縮圖只由 insights 使用，不會反過來決定主圖。
-    image: "./assets/ai-notes-cover.svg?v=20260823-1",
+    image: "./assets/ai-notes-cover.svg?v=20260823-2",
     href: "#",
     cta: "查看心得",
     tags: ["ChatGPT", "實作筆記", "免費分享"],
@@ -18,7 +18,7 @@ const projects = Object.freeze([
         meta: "01 / GA4 + GTM",
         title: "用 AI 做 GA4 / GTM 成長報告",
         description: "把唯讀數據整理成可驗證的每日成長任務",
-        image: "./assets/ga4-gtm-analytics-health.png",
+        image: "./assets/og.png",
         href: "https://github.com/max0821/ga4-gtm-analytics-health",
         trackId: "ai-ga-growth-report",
         trackType: "analytics",
@@ -272,9 +272,7 @@ function commitProject(nextIndex, animate = true) {
     insightList.replaceChildren(
       ...project.insights.map((insight) => {
         const link = document.createElement("a");
-        link.className = insight.trackType === "analytics"
-          ? "insight-card insight-card-featured"
-          : "insight-card";
+        link.className = "insight-card";
         link.href = insight.href;
         link.target = "_blank";
         link.rel = "noopener noreferrer";

@@ -26,7 +26,7 @@
   <path d="M0 620C220 545 350 730 560 630S940 520 1200 610" fill="none" stroke="url(#beam)" stroke-width="2"/>
   <path d="M0 650C220 575 350 760 560 660S940 550 1200 640" fill="none" stroke="#c9ff63" stroke-opacity="0.12" stroke-width="1"/>
 
-  <g transform="translate(690 112)">
+  <g transform="translate(630 68) scale(1.38)">
     <rect width="390" height="370" rx="12" fill="#07100e" fill-opacity="0.86" stroke="#c9ff63" stroke-opacity="0.6" stroke-width="2"/>
     <path d="M0 58h390" stroke="#c9ff63" stroke-opacity="0.22"/>
     <text x="28" y="48" fill="#c9ff63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="48" font-weight="800" letter-spacing="-2">GA4</text>
