@@ -3,10 +3,18 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://link.9sweb.com/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <image:image>
         <image:loc>https://link.9sweb.com/assets/og.png</image:loc>
       <image:title>9sweb Projects 專案入口</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://link.9sweb.com/05/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <image:image>
+      <image:loc>https://link.9sweb.com/05/assets/hero-observatory-v2.png</image:loc>
+      <image:title>ChatGPT Sites 效能實測報告</image:title>
     </image:image>
   </url>
 </urlset>

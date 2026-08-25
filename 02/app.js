@@ -13,9 +13,20 @@ const projects = Object.freeze([
     tags: ["ChatGPT", "實作筆記", "免費分享"],
     insights: [
       {
+        date: "2026.08.25",
+        dateISO: "2026-08-25",
+        meta: "01 / PUBLIC BENCHMARK",
+        title: "ChatGPT Sites 效能實測報告",
+        description: "官方條件、實測配置與 Hosting 能力的公開評測",
+        image: "./05/assets/hero-observatory-v2.png",
+        href: "https://link.9sweb.com/05/",
+        trackId: "ai-chatgpt-sites-benchmark",
+        trackType: "benchmark",
+      },
+      {
         date: "2026.08.23",
         dateISO: "2026-08-23",
-        meta: "01 / GA4 + GTM",
+        meta: "02 / GA4 + GTM",
         title: "用 AI 做 GA4 / GTM 成長報告",
         description: "把唯讀數據整理成可驗證的每日成長任務",
         image: "./assets/og.png",
@@ -26,7 +37,7 @@ const projects = Object.freeze([
       {
         date: "2026.08.22",
         dateISO: "2026-08-22",
-        meta: "02 / SOCIAL LINK",
+        meta: "03 / SOCIAL LINK",
         title: "免費客製自己的 Social Linktree",
         description: "GitHub 免費免主機，ChatGPT 連動後輕鬆搞定",
         image: "./assets/ai-social-linktree-thread.png",
@@ -37,7 +48,7 @@ const projects = Object.freeze([
       {
         date: "2026.08.22",
         dateISO: "2026-08-22",
-        meta: "03 / AGENT SKILL",
+        meta: "04 / AGENT SKILL",
         title: "Web Design Skill",
         description: "說明及安裝方式",
         image: "./assets/web-design-skill.png",

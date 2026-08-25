@@ -5,10 +5,17 @@
 - 網站：https://link.9sweb.com/
 - 作者：max0821
 - 語言：繁體中文（zh-Hant-TW）
-- 更新日期：2026-08-23
+- 更新日期：2026-08-25
 - 前端：純 HTML、CSS、JavaScript 與本地圖片資產
 
 ## AI 心得
+
+### ChatGPT Sites 效能實測報告
+
+- 發文日：2026-08-25
+- 類型：公開評測
+- 說明：整理官方條件、實測配置、Hosting 功能比較、效能樣本與採用結論。
+- 正式連結：https://link.9sweb.com/05/
 
 ### 用 AI 做 GA4 / GTM 成長報告
 
