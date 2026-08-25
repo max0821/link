@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">9sweb AI Notes</title>
+  <desc id="desc">A fixed neon interface cover for the 9sweb AI implementation notes and GA4 growth analysis.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b18"/>
+      <stop offset="0.52" stop-color="#0a1110"/>
+      <stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9ff63" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#c9ff63" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#c9ff63" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#c9ff63" stroke-opacity="0.09"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <path d="M0 620C220 545 350 730 560 630S940 520 1200 610" fill="none" stroke="url(#beam)" stroke-width="2"/>
+  <path d="M0 650C220 575 350 760 560 660S940 550 1200 640" fill="none" stroke="#c9ff63" stroke-opacity="0.12" stroke-width="1"/>
+
+  <g transform="translate(630 68) scale(1.38)">
+    <rect width="390" height="370" rx="12" fill="#07100e" fill-opacity="0.86" stroke="#c9ff63" stroke-opacity="0.6" stroke-width="2"/>
+    <path d="M0 58h390" stroke="#c9ff63" stroke-opacity="0.22"/>
+    <text x="28" y="48" fill="#c9ff63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="48" font-weight="800" letter-spacing="-2">GA4</text>
+    <text x="154" y="29" fill="#f5f1e8" fill-opacity="0.72" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="2">GROWTH</text>
+    <text x="154" y="46" fill="#f5f1e8" fill-opacity="0.72" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="2">SIGNALS</text>
+    <circle cx="347" cy="29" r="5" fill="#c9ff63" filter="url(#glow)"/>
+
+    <g transform="translate(24 82)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <rect width="104" height="76" rx="5" fill="#c9ff63" fill-opacity="0.08" stroke="#c9ff63" stroke-opacity="0.28"/>
+      <text x="14" y="23" fill="#c9ff63" font-size="10" letter-spacing="1.5">USERS</text>
+      <path d="M14 48h60M14 57h42" stroke="#f5f1e8" stroke-opacity="0.5" stroke-width="3"/>
+      <circle cx="84" cy="26" r="7" fill="none" stroke="#58d5ff" stroke-width="2"/>
+    </g>
+    <g transform="translate(143 82)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <rect width="104" height="76" rx="5" fill="#c9ff63" fill-opacity="0.08" stroke="#c9ff63" stroke-opacity="0.28"/>
+      <text x="14" y="23" fill="#c9ff63" font-size="10" letter-spacing="1.2">SESSIONS</text>
+      <path d="M14 48h70M14 57h52" stroke="#f5f1e8" stroke-opacity="0.5" stroke-width="3"/>
+      <path d="m78 24 8 8 10-13" fill="none" stroke="#58d5ff" stroke-width="2"/>
+    </g>
+    <g transform="translate(262 82)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <rect width="104" height="76" rx="5" fill="#c9ff63" fill-opacity="0.08" stroke="#c9ff63" stroke-opacity="0.28"/>
+      <text x="14" y="23" fill="#c9ff63" font-size="10" letter-spacing="1.2">CTA CLICKS</text>
+      <path d="M14 48h64M14 57h38" stroke="#f5f1e8" stroke-opacity="0.5" stroke-width="3"/>
+      <path d="M80 24h14v14" fill="none" stroke="#58d5ff" stroke-width="2"/>
+    </g>
+
+    <rect x="24" y="181" width="342" height="154" rx="6" fill="#050b0a" stroke="#c9ff63" stroke-opacity="0.24"/>
+    <text x="42" y="207" fill="#c9ff63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="2">7-DAY SIGNAL / LINK_CLICK</text>
+    <path d="M42 294h306M42 264h306M42 234h306" stroke="#c9ff63" stroke-opacity="0.1"/>
+    <path d="M42 302C72 278 82 286 108 264S145 284 171 248s42 25 67-3 36-8 55-32 30 11 55-18" fill="none" stroke="#58d5ff" stroke-width="4"/>
+    <circle cx="348" cy="195" r="4" fill="#58d5ff" filter="url(#glow)"/>
+    <text x="42" y="357" fill="#f5f1e8" fill-opacity="0.58" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" letter-spacing="2">READ-ONLY / DATA → NEXT ACTION</text>
+  </g>
+
+  <g fill="#c9ff63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="82" y="116" font-size="22" letter-spacing="8" opacity="0.82">BUILD IN PUBLIC</text>
+    <text x="78" y="300" font-size="116" font-weight="800" letter-spacing="-5">AI</text>
+    <text x="82" y="398" font-size="116" font-weight="800" letter-spacing="-5" fill="#f5f1e8">NOTES</text>
+    <text x="86" y="455" font-size="20" letter-spacing="5" opacity="0.72">SKILLS · EXPERIMENTS · SYSTEMS</text>
+  </g>
+
+  <g transform="translate(86 570)" fill="none" stroke="#c9ff63" stroke-width="2">
+    <rect width="390" height="88" rx="4" stroke-opacity="0.52"/>
+    <path d="M26 30h126M26 50h206M26 70h170" stroke-opacity="0.42"/>
+    <circle cx="334" cy="44" r="18" stroke-opacity="0.8"/>
+    <path d="m326 44 7 7 13-16"/>
+  </g>
+  <text x="111" y="622" fill="#c9ff63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" opacity="0.8">REAL WORK / CLEAR NOTES</text>
+</svg>
