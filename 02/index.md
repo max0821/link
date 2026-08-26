@@ -5,7 +5,7 @@
 - 網站：https://link.9sweb.com/
 - 作者：max0821
 - 語言：繁體中文（zh-Hant-TW）
-- 更新日期：2026-08-26
+- 更新日期：2026-08-25
 - 前端：純 HTML、CSS、JavaScript 與本地圖片資產
 
 ## AI 心得
