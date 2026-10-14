@@ -1,6 +1,6 @@
 # 9sweb Projects
 
-> 9sweb 的手機優先專案入口，收錄 AI 實作心得、GA4/GTM 成長分析、開源 Skill 與免費網頁遊戲。
+> 9sweb 的手機優先專案入口，收錄 PixelStyle Lawnchair、AI 實作心得、GA4/GTM 成長分析、開源 Skill 與免費網頁遊戲。
 
 主要語言為繁體中文（zh-Hant-TW）。網站使用純 HTML、CSS、JavaScript 與本地圖片資產，Canonical URL 為 https://link.9sweb.com/ 。
 
@@ -9,6 +9,8 @@
 - [9sweb Projects 完整文字版](https://link.9sweb.com/index.md): AI 心得、文章日期、專案介紹與正式連結。
 
 ## AI notes
+
+- [PixelStyle Lawnchair：工具頁、原生桌面匯入與 StandBy](https://github.com/max0821/lawnchair/releases/tag/pixelstyle-v15.0.0-beta3.0-r3): 基於 Lawnchair 的 PixelStyle fork；r1–r3 包含固定左側工具頁、原生桌面匯入、工具小工具與待機時鐘。r3 APK 可覆蓋升級 r1 或 r2；原生匯入需使用者啟用無障礙服務，支援情形取決於來源桌面的 UI 結構。
 
 - [ChatGPT Sites 效能實測報告](https://link.9sweb.com/05/): 整理官方條件、實測配置、Hosting 功能比較、效能樣本與採用結論。
 - [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/ga4-gtm-analytics-health): 獨立、通用的 GA4/GTM Analytics Health Codex Skill；報表留在私有環境。

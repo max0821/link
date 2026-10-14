@@ -1,14 +1,23 @@
 # 9sweb Projects
 
-> AI 實作心得、開源 Web Design Skill、GA4/GTM 成長分析與免費手機網頁遊戲的專案入口。
+> AI 實作心得、PixelStyle Lawnchair Android 啟動器、開源 Web Design Skill、GA4/GTM 成長分析與免費手機網頁遊戲的專案入口。
 
 - 網站：https://link.9sweb.com/
 - 作者：max0821
 - 語言：繁體中文（zh-Hant-TW）
-- 更新日期：2026-08-25
+- 更新日期：2026-10-14
 - 前端：純 HTML、CSS、JavaScript 與本地圖片資產
 
 ## AI 心得
+
+### PixelStyle Lawnchair：工具頁、原生桌面匯入與 StandBy
+
+- 發布日：2026-10-07（r3）
+- 類型：Android Launcher / Lawnchair fork
+- 說明：以 Lawnchair 為基礎的 PixelStyle 客製分支，r1–r3 整理出固定左側工具頁、原生桌面掃描匯入、工具小工具與待機時鐘。原生匯入需手動啟用 Lawnchair 無障礙服務，且會依原生桌面的 UI 結構而定；建議先備份現有桌面設定。
+- APK：r3 的 Android 版本碼為 `1500020301`，採用同一簽章，可覆蓋升級 r1 或 r2。
+- 正式連結：https://github.com/max0821/lawnchair/releases/tag/pixelstyle-v15.0.0-beta3.0-r3
+- 原始碼與完整正體中文說明：https://github.com/max0821/lawnchair
 
 ### ChatGPT Sites 效能實測報告
 
