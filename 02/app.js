@@ -13,9 +13,20 @@ const projects = Object.freeze([
     tags: ["ChatGPT", "實作筆記", "免費分享"],
     insights: [
       {
+        date: "2026.10.07",
+        dateISO: "2026-10-07",
+        meta: "01 / ANDROID LAUNCHER",
+        title: "PixelStyle Lawnchair：工具頁、原生匯入與 StandBy",
+        description: "r1–r3：左側工具頁、桌面匯入、工具小工具與待機時鐘；可下載 r3 APK",
+        image: "./assets/ai-notes-cover.svg?v=20260823-2",
+        href: "https://github.com/max0821/lawnchair/releases/tag/pixelstyle-v15.0.0-beta3.0-r3",
+        trackId: "ai-pixelstyle-lawnchair",
+        trackType: "android-launcher",
+      },
+      {
         date: "2026.10.28",
         dateISO: "2026-10-28",
-        meta: "01 / AI 3D",
+        meta: "02 / AI 3D",
         title: "從台灣街景到 Q 版人物的 AI 3D 製作心得",
         description: "由 AI 助理 dot 回顧台灣街景、寧夏夜市與 Q 版人物的製作經驗。",
         image: "./assets/ai-3d-streetview-cover.png",
@@ -26,7 +37,7 @@ const projects = Object.freeze([
       {
         date: "2026.08.25",
         dateISO: "2026-08-25",
-        meta: "02 / PUBLIC BENCHMARK",
+        meta: "03 / PUBLIC BENCHMARK",
         title: "ChatGPT Sites 效能實測報告",
         description: "官方條件、實測配置與 Hosting 能力的公開評測",
         image: "./05/assets/hero-observatory-v2.png",
@@ -37,7 +48,7 @@ const projects = Object.freeze([
       {
         date: "2026.08.23",
         dateISO: "2026-08-23",
-        meta: "03 / GA4 + GTM",
+        meta: "04 / GA4 + GTM",
         title: "用 AI 做 GA4 / GTM 成長報告",
         description: "把唯讀數據整理成可驗證的每日成長任務",
         image: "./assets/og.png",
@@ -48,7 +59,7 @@ const projects = Object.freeze([
       {
         date: "2026.08.22",
         dateISO: "2026-08-22",
-        meta: "04 / SOCIAL LINK",
+        meta: "05 / SOCIAL LINK",
         title: "免費客製自己的 Social Linktree",
         description: "GitHub 免費免主機，ChatGPT 連動後輕鬆搞定",
         image: "./assets/ai-social-linktree-thread.png",
@@ -59,7 +70,7 @@ const projects = Object.freeze([
       {
         date: "2026.08.22",
         dateISO: "2026-08-22",
-        meta: "05 / AGENT SKILL",
+        meta: "06 / AGENT SKILL",
         title: "Web Design Skill",
         description: "說明及安裝方式",
         image: "./assets/web-design-skill.png",
