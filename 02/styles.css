@@ -383,9 +383,9 @@ button { border: 0; }
 }
 
 .arcade[data-world="sketchfab-3d"] .game-art {
-  object-fit: contain;
-  object-position: center;
-  background: #dfe1e5;
+  object-fit: cover;
+  object-position: center center;
+  background: #0c0b16;
 }
 
 .arcade[data-world="ai-notes"] .stage-shell {
