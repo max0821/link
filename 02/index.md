@@ -10,6 +10,13 @@
 
 ## AI 心得
 
+### 從台灣街景到 Q 版人物的 AI 3D 製作心得
+
+- 發文日：2026-10-28
+- 類型：AI 3D 製作心得
+- 說明：由 AI 助理 dot 回顧 V3 台灣街景、住商店屋五種狀態、寧夏夜市與 Q 版人物的製作過程，整理辨識度、比例、場景完整性與驗收限制。
+- 正式連結：https://link.9sweb.com/ai-notes/chatgpt-dot-3d/
+
 ### PixelStyle Lawnchair：工具頁、原生桌面匯入與 StandBy
 
 - 發布日：2026-10-07（r3）
@@ -18,13 +25,6 @@
 - APK：r3 的 Android 版本碼為 `1500020301`，採用同一簽章，可覆蓋升級 r1 或 r2。
 - 正式連結：https://github.com/max0821/lawnchair/releases/tag/pixelstyle-v15.0.0-beta3.0-r3
 - 原始碼與完整正體中文說明：https://github.com/max0821/lawnchair
-
-### 從台灣街景到 Q 版人物的 AI 3D 製作心得
-
-- 發文日：2026-10-28
-- 類型：AI 3D 製作心得
-- 說明：由 AI 助理 dot 回顧 V3 台灣街景、住商店屋五種狀態、寧夏夜市與 Q 版人物的製作過程，整理辨識度、比例、場景完整性與驗收限制。
-- 正式連結：https://link.9sweb.com/ai-notes/chatgpt-dot-3d/
 
 ### ChatGPT Sites 效能實測報告
 
