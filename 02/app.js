@@ -88,7 +88,7 @@ const projects = Object.freeze([
     kicker: "TAIWAN 3D ARCHIVE",
     title: "3D展示",
     description: "把台灣建築與街景模型整理成可以直接瀏覽的 3D 展示。",
-    image: "./assets/sketchfab-3d-og.jpeg",
+    image: "./assets/ai-3d-streetview-cover.png",
     href: "https://sketchfab.com/Max.0821",
     cta: "查看 3D 展示",
     tags: ["Sketchfab", "台灣街景", "3D模型"],
