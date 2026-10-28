@@ -3,10 +3,22 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://link.9sweb.com/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <image:image>
         <image:loc>https://link.9sweb.com/assets/og.png</image:loc>
       <image:title>9sweb Projects 專案入口</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://link.9sweb.com/assets/sketchfab-3d-og.jpeg</image:loc>
+      <image:title>Max | MiniCity Taiwan 3D 展示</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://link.9sweb.com/ai-notes/chatgpt-dot-3d/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image>
+      <image:loc>https://link.9sweb.com/assets/ai-3d-streetview-cover.png</image:loc>
+      <image:title>從台灣街景到 Q 版人物的 AI 3D 製作心得</image:title>
     </image:image>
   </url>
   <url>

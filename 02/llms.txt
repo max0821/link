@@ -1,6 +1,6 @@
 # 9sweb Projects
 
-> 9sweb 的手機優先專案入口，收錄 AI 實作心得、GA4/GTM 成長分析、開源 Skill 與免費網頁遊戲。
+> 9sweb 的手機優先專案入口，收錄 AI 實作心得、台灣 3D 建築與街景模型、GA4/GTM 成長分析、開源 Skill 與免費網頁遊戲。
 
 主要語言為繁體中文（zh-Hant-TW）。網站使用純 HTML、CSS、JavaScript 與本地圖片資產，Canonical URL 為 https://link.9sweb.com/ 。
 
@@ -10,10 +10,15 @@
 
 ## AI notes
 
+- [從台灣街景到 Q 版人物的 AI 3D 製作心得](https://link.9sweb.com/ai-notes/chatgpt-dot-3d/): AI 助理 dot 回顧 V3 台灣街景、住商店屋、寧夏夜市與 Q 版人物的製作經驗，整理辨識度、比例、場景完整性與驗收限制。
 - [ChatGPT Sites 效能實測報告](https://link.9sweb.com/05/): 整理官方條件、實測配置、Hosting 功能比較、效能樣本與採用結論。
 - [用 AI 做 GA4 / GTM 成長報告](https://github.com/max0821/ga4-gtm-analytics-health): 獨立、通用的 GA4/GTM Analytics Health Codex Skill；報表留在私有環境。
 - [免費客製自己的 Social Linktree](https://www.threads.com/share/FalBiuCAX/): 使用 ChatGPT、GitHub Pages 與可選的 Cloudflare 自製免費 Social Link 引導頁。
 - [Web Design Skill](https://github.com/max0821/web-design-skill): Web Design Agent Skill 的說明、安裝與原始碼。
+
+## 3D showcase
+
+- [Max | MiniCity Taiwan](https://sketchfab.com/Max.0821): 以 Sketchfab 展示台灣建築與街景 3D 模型，目前公開 56 個模型。
 
 ## Web games
 

@@ -240,7 +240,7 @@ button { border: 0; }
 .world-switch {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 22px;
   padding: 4px;
   border: 1px solid var(--line);
@@ -304,7 +304,7 @@ button { border: 0; }
   top: 4px;
   bottom: 4px;
   left: 4px;
-  width: calc((100% - 8px) / 3);
+  width: calc((100% - 8px) / 4);
   border: 1px solid rgba(var(--accent-rgb), 0.43);
   border-radius: 2px;
   background: rgba(var(--accent-rgb), 0.13);
@@ -313,8 +313,9 @@ button { border: 0; }
     border-color 0.55s ease, background 0.55s ease;
 }
 
-.arcade[data-world="lootsu"] .switch-glider { transform: translateX(100%); }
-.arcade[data-world="maxabounce"] .switch-glider { transform: translateX(200%); }
+.arcade[data-world="sketchfab-3d"] .switch-glider { transform: translateX(100%); }
+.arcade[data-world="lootsu"] .switch-glider { transform: translateX(200%); }
+.arcade[data-world="maxabounce"] .switch-glider { transform: translateX(300%); }
 
 .game-stage {
   --tilt-x: 0deg;
@@ -379,6 +380,12 @@ button { border: 0; }
   object-fit: contain;
   object-position: center;
   background: #06152c;
+}
+
+.arcade[data-world="sketchfab-3d"] .game-art {
+  object-fit: contain;
+  object-position: center;
+  background: #dfe1e5;
 }
 
 .arcade[data-world="ai-notes"] .stage-shell {

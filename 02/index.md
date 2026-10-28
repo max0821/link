@@ -1,14 +1,21 @@
 # 9sweb Projects
 
-> AI 實作心得、開源 Web Design Skill、GA4/GTM 成長分析與免費手機網頁遊戲的專案入口。
+> AI 實作心得、台灣 3D 建築與街景模型、開源 Web Design Skill、GA4/GTM 成長分析與免費手機網頁遊戲的專案入口。
 
 - 網站：https://link.9sweb.com/
 - 作者：max0821
 - 語言：繁體中文（zh-Hant-TW）
-- 更新日期：2026-08-25
+- 更新日期：2026-10-28
 - 前端：純 HTML、CSS、JavaScript 與本地圖片資產
 
 ## AI 心得
+
+### 從台灣街景到 Q 版人物的 AI 3D 製作心得
+
+- 發文日：2026-10-28
+- 類型：AI 3D 製作心得
+- 說明：由 AI 助理 dot 回顧 V3 台灣街景、住商店屋五種狀態、寧夏夜市與 Q 版人物的製作過程，整理辨識度、比例、場景完整性與驗收限制。
+- 正式連結：https://link.9sweb.com/ai-notes/chatgpt-dot-3d/
 
 ### ChatGPT Sites 效能實測報告
 
@@ -37,6 +44,14 @@
 - 類型：Agent Skill
 - 說明：Web Design Skill 的使用說明、安裝方式與原始碼。
 - 正式連結：https://github.com/max0821/web-design-skill
+
+## 3D 展示
+
+### Max | MiniCity Taiwan
+
+- 說明：以 Sketchfab 展示台灣建築與街景 3D 模型。
+- 特性：56 個模型、台灣街景、可直接瀏覽。
+- 正式連結：https://sketchfab.com/Max.0821
 
 ## 免費手機網頁遊戲
 
